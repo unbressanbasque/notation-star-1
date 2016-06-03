@@ -1,0 +1,59 @@
+body {
+	font-family: Verdana, arial;
+}
+
+.notation-text {
+	color: #000000;
+	font-size: 18px;
+	text-align: center;
+	margin: 18px;
+}
+
+.notation-block-star {
+	display: table;
+	margin: 0 auto;
+	width: inherit;
+}
+
+/*
+	Définition du style "par défaut" d'une étoile (fond gris, elle n'est pas sélectionnée)
+*/
+.notation-star {
+	background-image: url("../images/etoile_grise.png");
+	background-repeat: no-repeat;
+	cursor: pointer;
+	display: table-cell;
+	float: right;
+	height: 64px;
+	width: 64px;
+	padding: 0 5px;
+}
+
+/*
+	Lorsque la souris passe au dessus d'une étoile nous changeons l'image de celle-ci (fond jaune)
+	Et nous changeons aussi la couleurs des étoiles précédentes
+*/
+.notation-star:hover,
+.notation-star:hover ~ .notation-star {
+	background-image: url("../images/etoile_jaune.png");
+}
+
+/*
+	Lorsque l'utilisateur clique sur une image nous changeons l'image de celle-ci (fond jaune)
+*/
+.notation-star-selected {
+	background-image: url("../images/etoile_jaune.png");
+	background-repeat: no-repeat;
+	cursor: pointer;
+	display: table-cell;
+	float: right;
+	height: 64px;
+	width: 64px;
+	padding: 0 5px;
+}
+/*
+	Et nous changeons aussi la couleurs des étoiles précédentes
+*/
+.notation-star-selected  ~ .notation-star {
+	background-image: url("../images/etoile_jaune.png");
+}
